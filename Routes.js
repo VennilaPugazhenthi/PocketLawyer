@@ -3,13 +3,14 @@ import { View, Text, Keyboard } from "react-native";
 import HomeScreen from "./src/screens/HomeScreen";
 import RecordingScreen from "./src/screens/RecordingScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Feather, FontAwesome5 } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 
 const tabOptions = {
   tabBarOptions: {
-    activeTintColor: "#3D5A80",
-    inactiveTintColor: "#989DA4",
+    activeTintColor: "black",
+    inactiveTintColor: "grey",
     showIcon: true,
     upperCaseLabel: false,
     style: {
@@ -21,16 +22,32 @@ const tabOptions = {
     indicatorStyle: {
       backgroundColor: "black",
     },
-    pressColor: "#3D5A80",
+    pressColor: "blue",
   },
   lazy: true,
 };
 
 export const MainStack = () => {
   return (
-    <Tab.Navigator {...tabOptions}>
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Recordings" component={RecordingScreen} />
+    <Tab.Navigator {...tabOptions} tabBarOptions={{ showIcon: true }}>
+      <Tab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          tabBarIcon: ({ tintColor }) => (
+            <Feather name="home" size={24} color={tintColor} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Recordings"
+        component={RecordingScreen}
+        options={{
+          tabBarIcon: ({ tintColor }) => (
+            <FontAwesome5 name="record-vinyl" size={24} color={tintColor} />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 };
