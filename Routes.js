@@ -14,11 +14,11 @@ export const MainStack = () => {
         tabBarIcon: ({ focused, color, size }) => {
           let iconColor;
           if (route.name === "Home") {
-            iconColor = focused ? "blue" : "grey";
+            iconColor = focused ? "#4287f5" : "grey";
             return <Feather name="home" size={24} color={iconColor} />;
           }
           if (route.name === "Recordings") {
-            iconColor = focused ? "blue" : "grey";
+            iconColor = focused ? "#4287f5" : "grey";
             return (
               <FontAwesome5 name="record-vinyl" size={24} color={iconColor} />
             );
@@ -27,7 +27,7 @@ export const MainStack = () => {
       })}
       tabBarOptions={{
         showIcon: true,
-        activeTintColor: "blue",
+        activeTintColor: "#4287f5",
         inactiveTintColor: "grey",
       }}
     >
