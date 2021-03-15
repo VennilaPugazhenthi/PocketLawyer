@@ -3098,7 +3098,7 @@
   "resolved" "https://registry.yarnpkg.com/expo-application/-/expo-application-2.4.1.tgz"
   "version" "2.4.1"
 
-"expo-asset@~8.2.1":
+"expo-asset@*", "expo-asset@~8.2.1":
   "integrity" "sha512-Ckiok7BFB6WjKNifa1b3mx2zGY8DnV2CttSQMTnMd6+0EOx1qOMsZDNkryJVpVOtpAetCdHWd5s9f2CdmosowA=="
   "resolved" "https://registry.yarnpkg.com/expo-asset/-/expo-asset-8.2.2.tgz"
   "version" "8.2.2"
@@ -3108,6 +3108,14 @@
     "md5-file" "^3.2.3"
     "path-browserify" "^1.0.0"
     "url-parse" "^1.4.4"
+
+"expo-av@~8.7.0":
+  "integrity" "sha512-tYw0z//UZm9THicOsu4w0A7Olq/JauTy7kcBR15Fhyppd9wd8Jtq7QYNtf2igd1R+byS2L0AGwE0nazlbQR+Qw=="
+  "resolved" "https://registry.npmjs.org/expo-av/-/expo-av-8.7.0.tgz"
+  "version" "8.7.0"
+  dependencies:
+    "lodash" "^4.17.15"
+    "nullthrows" "^1.1.0"
 
 "expo-constants@~9.3.3":
   "integrity" "sha512-qIlv2ffSjQl3wrvJwXYoNfQNfH/sK46EXcgyEQnQ1SAQO4ukwTEpG9j3fdW6aTiVEVrv/DsA1IaVRqKrUwSd3A=="
